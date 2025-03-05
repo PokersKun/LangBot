@@ -42,4 +42,4 @@ jobs:
       - name: Create Buildx
         run: docker buildx create --name mybuilder --use
       - name: Build  # image name: pocketfan233/langbot:<VERSION>
-        run: docker buildx build --platform linux/arm64,linux/amd64 -t pocketfan233/langbot:${{ steps.check_version.outputs.version }} -t pocketfan233/langbot:latest . --push
+        run: docker buildx build --platform linux/arm64,linux/amd64 -t pocketfan233/langbot:v3.4.10 -t pocketfan233/langbot:latest . --push
